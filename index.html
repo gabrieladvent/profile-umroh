@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barokah Umroh - Perjalanan Suci Penuh Berkah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .mosque-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-kaaba text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white">Barokah Umroh</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-purple-200 transition duration-300">Beranda</a>
+                    <a href="#about" class="text-white hover:text-purple-200 transition duration-300">Tentang</a>
+                    <a href="#services" class="text-white hover:text-purple-200 transition duration-300">Layanan</a>
+                    <a href="#packages" class="text-white hover:text-purple-200 transition duration-300">Paket</a>
+                    <a href="#contact" class="text-white hover:text-purple-200 transition duration-300">Kontak</a>
+                </div>
+
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen gradient-bg mosque-pattern flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full hero-animation"></div>
+        <div class="absolute top-40 right-20 w-16 h-16 bg-white bg-opacity-10 rounded-full hero-animation"
+            style="animation-delay: -2s"></div>
+        <div class="absolute bottom-40 left-20 w-12 h-12 bg-white bg-opacity-10 rounded-full hero-animation"
+            style="animation-delay: -4s"></div>
+
+        <div class="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <div class="inline-block p-4 bg-white bg-opacity-20 rounded-full mb-6 hero-animation">
+                    <i class="fas fa-moon text-6xl text-white"></i>
+                </div>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Perjalanan Suci <br>
+                <span class="text-yellow-300">Penuh Berkah</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
+                Wujudkan impian ibadah umroh Anda bersama kami. Pelayanan terpercaya,
+                paket lengkap, dan bimbingan spiritual yang akan membuat perjalanan suci Anda tak terlupakan.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button
+                    class="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-full transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-plane mr-2"></i>
+                    Lihat Paket Umroh
+                </button>
+                <button
+                    class="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold rounded-full transition duration-300">
+                    <i class="fas fa-phone mr-2"></i>
+                    Konsultasi Gratis
+                </button>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down text-2xl opacity-70"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-8">
+                        Tentang Barokah Umroh
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Dengan pengalaman lebih dari 15 tahun dalam melayani jamaah umroh,
+                        Barokah Umroh telah dipercaya oleh ribuan jamaah untuk menunaikan ibadah suci mereka.
+                        Kami berkomitmen memberikan pelayanan terbaik dengan fasilitas premium dan bimbingan spiritual
+                        yang mendalam.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-certificate text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Berlisensi Resmi</h4>
+                                <p class="text-gray-600 text-sm">Kemenag RI & IATA</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-users text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">15,000+ Jamaah</h4>
+                                <p class="text-gray-600 text-sm">Telah melayani</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-star text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Rating 4.9/5</h4>
+                                <p class="text-gray-600 text-sm">Kepuasan jamaah</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clock text-orange-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">24/7 Support</h4>
+                                <p class="text-gray-600 text-sm">Siap melayani</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl p-8 text-white">
+                        <div class="mb-6">
+                            <i class="fas fa-mosque text-6xl opacity-20"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                        <p class="text-lg opacity-90 mb-6">
+                            Menjadi penyelenggara ibadah umroh terpercaya yang menghadirkan
+                            perjalanan spiritual bermakna bagi setiap jamaah.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mb-4">Misi Kami</h3>
+                        <ul class="space-y-2 opacity-90">
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3"></i>
+                                Memberikan pelayanan prima dan terpercaya
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3"></i>
+                                Menyediakan paket umroh berkualitas tinggi
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check mr-3"></i>
+                                Memberikan bimbingan spiritual yang mendalam
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-6">Layanan Kami</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Kami menyediakan berbagai layanan komprehensif untuk memastikan perjalanan umroh Anda berjalan
+                    lancar dan penuh berkah.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-plane-departure text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Tiket Pesawat</h3>
+                    <p class="text-gray-600 mb-6">
+                        Tiket pesawat langsung Jakarta-Jeddah dengan maskapai terpercaya dan jadwal yang fleksibel.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Maskapai internasional
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Bagasi 30kg
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Makanan halal
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bed text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Hotel Bintang 5</h3>
+                    <p class="text-gray-600 mb-6">
+                        Akomodasi hotel berbintang dekat Masjidil Haram dan Masjid Nabawi dengan fasilitas mewah.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Jarak walking distance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2">
+                        </li>
+                        AC & WiFi gratis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Buffet internasional
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bus text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Transportasi AC</h3>
+                    <p class="text-gray-600 mb-6">
+                        Bus AC full untuk city tour dan transportasi antar kota dengan sopir berpengalaman.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Bus mewah ber-AC
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Sopir berpengalaman
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Rute wisata religi
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Catering Halal</h3>
+                    <p class="text-gray-600 mb-6">
+                        Makanan halal dengan menu Indonesia dan Arab, disiapkan oleh chef berpengalaman.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            3x sehari + snack
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Menu variatif
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Sertifikat halal
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Muthowif Berpengalaman</h3>
+                    <p class="text-gray-600 mb-6">
+                        Pembimbing ibadah profesional yang akan memandu setiap ritual dengan penuh kehidmatan.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Lisensi resmi Arab Saudi
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Bahasa Indonesia
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Bimbingan 24 jam
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 card-hover shadow-lg">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase-medical text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kesehatan & Keamanan</h3>
+                    <p class="text-gray-600 mb-6">
+                        Layanan kesehatan lengkap dan asuransi perjalanan untuk kenyamanan selama ibadah.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Tim medis standby
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Asuransi perjalanan
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            P3K lengkap
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gradient mb-6">Paket Umroh</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Pilih paket umroh yang sesuai dengan kebutuhan dan budget Anda. Semua paket sudah termasuk visa dan
+                    asuransi.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden card-hover">
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Paket Reguler</h3>
+                            <p class="text-gray-600 mb-4">9 Hari 8 Malam</p>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">Rp 25.500.000</div>
+                            <p class="text-sm text-gray-500">per jamaah</p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                Hotel bintang 4 dekat Haram
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                Tiket pesawat Saudi Airlines
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                Makan 3x sehari + snack
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                City tour Makkah & Madinah
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                Ziarah wajib & sunah
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                Bimbingan muthowif
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition duration-300">
+                            Pilih Paket Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 2 - Featured -->
+                <div
+                    class="relative bg-gradient-to-br from-purple-600 to-indigo-700 rounded-3xl shadow-xl overflow-hidden card-hover">
+                    <div
+                        class="absolute top-4 right-4 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                        TERPOPULER
+                    </div>
+
+                    <div class="p-8 text-white">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold mb-2">Paket Premium</h3>
+                            <p class="text-purple-200 mb-4">12 Hari 11 Malam</p>
+                            <div class="text-4xl font-bold mb-2">Rp 35.750.000</div>
+                            <p class="text-sm text-purple-200">per jamaah</p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Hotel bintang 5 view Haram
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Tiket pesawat Emirates
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Buffet internasional premium
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Private city tour
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Ziarah lengkap + Thaif
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Muthowif berpengalaman
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                                Oleh-oleh exclusive
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full py-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl transition duration-300">
+                            Pilih Paket Ini
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="relative bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden card-hover">
+                    <div class="p-8">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Paket VIP</h3>
+                            <p class="text-gray-600 mb-4">15 Hari 14 Malam</p>
+                            <div class="text-4xl font-bold text-purple-600 mb-2">Rp 48.900.000</div>
+                            <p class="text-sm text-gray-500">per jamaah</p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                Hotel bintang 5 suite room
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                First class flight
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                Personal butler service
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                Exclusive transportation
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                Complete ziarah package
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                VIP muthowif guidance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-crown text-yellow-500 mr-3"></i>
+                                Luxury amenities
+                            </li>
+                        </ul>
+
+                        <button
+                            class="w-full py-4 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl transition duration-300">
+                            Pilih Paket Ini
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
